@@ -134,7 +134,7 @@ GameObject:
   - component: {fileID: 162156767}
   - component: {fileID: 162156766}
   - component: {fileID: 162156765}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Platform (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -150,7 +150,7 @@ BoxCollider2D:
   m_GameObject: {fileID: 162156764}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: cff729425a5992547bb2c0339f69fb7e, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
@@ -327,10 +327,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 209404263}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: groundCheck
   m_TagString: Untagged
-  m_Icon: {fileID: 7422848464349959988, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: -5397416234189338067, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -342,7 +342,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 209404262}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.03892257, y: -0.08685953, z: 0.026814122}
+  m_LocalPosition: {x: -0.032, y: -0.0765, z: 0.026814122}
   m_LocalScale: {x: 0.08471848, y: 0.07551469, z: 0.859752}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -360,6 +360,7 @@ GameObject:
   - component: {fileID: 246007999}
   - component: {fileID: 246007998}
   - component: {fileID: 246007997}
+  - component: {fileID: 246008000}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -433,6 +434,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &246008000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 246007996}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa872aa1c8b7fb0479b36c69474ee384, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1724954994
 GameObject:
   m_ObjectHideFlags: 0
@@ -446,7 +459,8 @@ GameObject:
   - component: {fileID: 1724954995}
   - component: {fileID: 1724954998}
   - component: {fileID: 1724954999}
-  m_Layer: 3
+  - component: {fileID: 1724955000}
+  m_Layer: 0
   m_Name: Player_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -586,7 +600,27 @@ MonoBehaviour:
   L: 276
   R: 275
   groundCheck: {fileID: 209404263}
-  groundCheckRadius: 0.4
+  groundCheckRadius: 0.2
   WhatIsGround:
     serializedVersion: 2
-    m_Bits: 8
+    m_Bits: 64
+--- !u!95 &1724955000
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1724954994}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 13824b377e482df4e8cab99a5bf3c6c5, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0

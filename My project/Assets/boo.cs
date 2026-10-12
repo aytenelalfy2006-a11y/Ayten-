@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class bo : MonoBehaviour
+public class boo : MonoBehaviour
 {
      // Start is called before the first frame update
    public float moveSpeed;
@@ -14,9 +14,12 @@ public class bo : MonoBehaviour
     public float groundCheckRadius;
     public LayerMask WhatIsGround;
     private bool grounded;
+    private Animator anim;
 
     void Start()
     {
+        anim = GetComponent<Animator>();
+        
         
     }
 
@@ -46,6 +49,9 @@ public class bo : MonoBehaviour
                 GetComponent<SpriteRenderer>().flipX=false;
             }
         }
+        anim.SetFloat("speed",Mathf.Abs(GetComponent<Rigidbody2D>().velocity.x));
+        anim.SetFloat("height", GetComponent<Rigidbody2D>().velocity.y);
+        anim.SetBool("grounded", grounded);
     }
     void FixedUpdate()
     {
